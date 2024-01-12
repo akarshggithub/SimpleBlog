@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Blog App</title>
+</head>
+<body>
+  <nav>
+    <% if current_user %>
+      Welcome, <%= current_user.username %>! | <%= link_to 'Logout', logout_path, method: :delete %>
+    <% else %>
+      <%= link_to 'Login', login_path %> | <%= link_to 'Register', register_path %>
+    <% end %>
+  </nav>
+  <div>
+    <%= yield %>
+  </div>
+</body>
+</html>

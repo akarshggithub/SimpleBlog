@@ -1,0 +1,1009 @@
+Started GET "/" for 127.0.0.1 at 2024-01-09 12:28:25 +0000
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.7.4/gems/railties-7.1.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.7.4/gems/railties-7.1.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.4ms | Allocations: 468)
+Completed 200 OK in 34ms (Views: 12.7ms | ActiveRecord: 0.0ms | Allocations: 9096)
+
+
+Started GET "/" for 127.0.0.1 at 2024-01-09 12:46:35 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20240109122848_create_users.rb
+
+
+):
+  
+activerecord (7.1.2) lib/active_record/migration.rb:754:in `check_pending_migrations'
+activerecord (7.1.2) lib/active_record/migration.rb:643:in `block (2 levels) in call'
+activesupport (7.1.2) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.2) lib/active_record/migration.rb:648:in `block in call'
+activerecord (7.1.2) lib/active_record/migration.rb:640:in `synchronize'
+activerecord (7.1.2) lib/active_record/migration.rb:640:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.2) lib/rails/engine.rb:529:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started POST "/rails/actions" for 127.0.0.1 at 2024-01-09 12:46:40 +0000
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-01-09 12:46:40.768554', '2024-01-09 12:46:40.768560') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20240109122848)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "password_digest" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240109122848') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2024-01-09 12:46:40 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 97)
+  Rendered layout layouts/application.html.erb (Duration: 288.1ms | Allocations: 76990)
+Completed 200 OK in 296ms (Views: 289.5ms | ActiveRecord: 0.0ms | Allocations: 79480)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-01-09 12:47:04 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | Allocations: 7076)
+Completed 200 OK in 21ms (Views: 20.7ms | ActiveRecord: 0.0ms | Allocations: 7298)
+
+
+Started GET "/register" for 127.0.0.1 at 2024-01-09 12:47:18 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 105)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 1201)
+Completed 200 OK in 17ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 6208)
+
+
+Started GET "/register" for 127.0.0.1 at 2024-01-09 12:47:36 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1003)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 1224)
+
+
+Started GET "/register" for 127.0.0.1 at 2024-01-09 12:50:35 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 10.5ms | Allocations: 2229)
+  Rendered layout layouts/application.html.erb (Duration: 54.4ms | Allocations: 6704)
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 0.0ms | Allocations: 11678)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<ActionView::Base:0x0000000000f988>
+Did you mean?  current_page?):
+     5: </head>
+     6: <body>
+     7:   <nav>
+     8:     <% if current_user %>
+     9:       Welcome, <%= current_user.username %>! | <%= link_to 'Logout', logout_path, method: :delete %>
+    10:     <% else %>
+    11:       <%= link_to 'Login', login_path %> | <%= link_to 'Register', register_path %>
+  
+app/views/layouts/application.html.erb:8
+Started GET "/register" for 127.0.0.1 at 2024-01-09 12:52:25 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1030)
+  Rendered layout layouts/application.html.erb (Duration: 50.0ms | Allocations: 5491)
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 0.0ms | Allocations: 10459)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<ActionView::Base:0x00000000013268>
+Did you mean?  current_page?):
+     5: </head>
+     6: <body>
+     7:   <nav>
+     8:     <% if current_user %>
+     9:       Welcome, <%= current_user.username %>! | <%= link_to 'Logout', logout_path, method: :delete %>
+    10:     <% else %>
+    11:       <%= link_to 'Login', login_path %> | <%= link_to 'Register', register_path %>
+  
+app/views/layouts/application.html.erb:8
+Started GET "/register" for 127.0.0.1 at 2024-01-09 12:53:50 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1032)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 1417)
+Completed 200 OK in 13ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 6408)
+
+
+Started POST "/register" for 127.0.0.1 at 2024-01-09 12:54:06 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"test", "password_digest"=>"[FILTERED]"}, "commit"=>"Register"}
+Redirected to http://127.0.0.1:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 446)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-01-09 12:54:06 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 658)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 779)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 1119)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-01-09 12:54:15 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"test", "password"=>"[FILTERED]", "commit"=>"Login"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 2284)
+
+
+  
+NameError (undefined local variable or method `users' for User:Class
+Did you mean?  username):
+  
+app/models/user.rb:18:in `find_by_username'
+app/controllers/sessions_controller.rb:6:in `create'
+Started POST "/login" for 127.0.0.1 at 2024-01-09 12:55:17 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"test", "password"=>"[FILTERED]", "commit"=>"Login"}
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 457)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 840)
+Completed 200 OK in 10ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 6128)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-01-09 12:55:19 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"test", "password"=>"[FILTERED]", "commit"=>"Login"}
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 208)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 327)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 774)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-01-09 12:55:20 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"test", "password"=>"[FILTERED]", "commit"=>"Login"}
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 206)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 325)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 767)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-01-09 12:55:21 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"test", "password"=>"[FILTERED]", "commit"=>"Login"}
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 206)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 325)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms | Allocations: 779)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-01-09 12:55:21 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"test", "password"=>"[FILTERED]", "commit"=>"Login"}
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 206)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 325)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 775)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-01-09 12:55:22 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"test", "password"=>"[FILTERED]", "commit"=>"Login"}
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 206)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 325)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 773)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-01-09 12:55:24 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 404)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 523)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 740)
+
+
+Started GET "/register" for 127.0.0.1 at 2024-01-09 12:55:25 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1008)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 1129)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 1474)
+
+
+Started POST "/register" for 127.0.0.1 at 2024-01-09 12:55:27 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"test", "password_digest"=>"[FILTERED]"}, "commit"=>"Register"}
+Redirected to http://127.0.0.1:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 398)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-01-09 12:55:27 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 406)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 525)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 743)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-01-09 12:55:28 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"test", "password"=>"[FILTERED]", "commit"=>"Login"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 2444)
+
+
+  
+NameError (uninitialized constant User::BCrypt):
+  
+app/models/user.rb:23:in `authenticate'
+app/controllers/sessions_controller.rb:8:in `create'
+Started POST "/login" for 127.0.0.1 at 2024-01-09 12:56:53 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"test", "password"=>"[FILTERED]", "commit"=>"Login"}
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 517)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 939)
+Completed 200 OK in 38ms (Views: 21.5ms | ActiveRecord: 0.0ms | Allocations: 13412)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-01-09 12:56:55 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"test", "password"=>"[FILTERED]", "commit"=>"Login"}
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 208)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 327)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 777)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-01-09 12:56:56 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"test", "password"=>"[FILTERED]", "commit"=>"Login"}
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 206)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 325)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 772)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-01-09 12:56:56 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"test", "password"=>"[FILTERED]", "commit"=>"Login"}
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 206)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 325)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 776)
+
+
+Started GET "/register" for 127.0.0.1 at 2024-01-09 12:56:58 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1828)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 1949)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 2304)
+
+
+Started POST "/register" for 127.0.0.1 at 2024-01-09 12:56:59 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"test", "password_digest"=>"[FILTERED]"}, "commit"=>"Register"}
+Redirected to http://127.0.0.1:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 437)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-01-09 12:56:59 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 400)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 519)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 737)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-01-09 12:57:01 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"test", "password"=>"[FILTERED]", "commit"=>"Login"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 724)
+
+
+  
+BCrypt::Errors::InvalidHash (invalid hash):
+  
+app/models/user.rb:23:in `new'
+app/models/user.rb:23:in `authenticate'
+app/controllers/sessions_controller.rb:8:in `create'
+Started GET "/login" for 127.0.0.1 at 2024-01-09 12:57:05 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 400)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 519)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 736)
+
+
+Started GET "/register" for 127.0.0.1 at 2024-01-09 12:57:07 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 722)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 841)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 1061)
+
+
+Started POST "/register" for 127.0.0.1 at 2024-01-09 12:57:12 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"test", "password_digest"=>"[FILTERED]"}, "commit"=>"Register"}
+Redirected to http://127.0.0.1:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 408)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-01-09 12:57:12 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 394)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 513)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 729)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-01-09 12:57:15 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"test", "password"=>"[FILTERED]", "commit"=>"Login"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 717)
+
+
+  
+BCrypt::Errors::InvalidHash (invalid hash):
+  
+app/models/user.rb:23:in `new'
+app/models/user.rb:23:in `authenticate'
+app/controllers/sessions_controller.rb:8:in `create'
+Started GET "/login" for 127.0.0.1 at 2024-01-09 12:57:21 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 400)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 519)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 735)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-01-09 12:57:24 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"test", "password"=>"[FILTERED]", "commit"=>"Login"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 718)
+
+
+  
+BCrypt::Errors::InvalidHash (invalid hash):
+  
+app/models/user.rb:23:in `new'
+app/models/user.rb:23:in `authenticate'
+app/controllers/sessions_controller.rb:8:in `create'
+Started GET "/login" for 127.0.0.1 at 2024-01-09 12:57:32 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 400)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 519)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 736)
+
+
+Started GET "/" for 127.0.0.1 at 2024-01-09 12:57:34 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 390)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 509)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 725)
+
+
+Started GET "/register" for 127.0.0.1 at 2024-01-09 12:57:37 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 698)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 817)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 1037)
+
+
+Started POST "/register" for 127.0.0.1 at 2024-01-09 12:57:45 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"test1", "password_digest"=>"[FILTERED]"}, "commit"=>"Register"}
+Redirected to http://127.0.0.1:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 400)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-01-09 12:57:45 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 396)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 516)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 732)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-01-09 12:57:53 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"test1", "password"=>"[FILTERED]", "commit"=>"Login"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 717)
+
+
+  
+BCrypt::Errors::InvalidHash (invalid hash):
+  
+app/models/user.rb:23:in `new'
+app/models/user.rb:23:in `authenticate'
+app/controllers/sessions_controller.rb:8:in `create'
+Started POST "/login" for 127.0.0.1 at 2024-01-09 12:58:44 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"test1", "password"=>"[FILTERED]", "commit"=>"Login"}
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 4566)
+
+
+  
+SyntaxError (/home/ubuntu/InnovlabsBlogApp/SimpleBlog/app/models/user.rb:38: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/models/user.rb:38: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/sessions_controller.rb:6:in `create'
+Started POST "/login" for 127.0.0.1 at 2024-01-09 12:59:11 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"test1", "password"=>"[FILTERED]", "commit"=>"Login"}
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 492)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 893)
+Completed 200 OK in 13ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 6579)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-01-09 12:59:17 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"test", "password"=>"[FILTERED]", "commit"=>"Login"}
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 208)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 327)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 775)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-01-09 12:59:20 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"test1", "password"=>"[FILTERED]", "commit"=>"Login"}
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 206)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 325)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 772)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-01-09 12:59:23 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"", "password"=>"[FILTERED]", "commit"=>"Login"}
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 206)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 325)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 773)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-01-09 12:59:23 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"", "password"=>"[FILTERED]", "commit"=>"Login"}
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 206)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 325)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 776)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-01-09 12:59:24 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"", "password"=>"[FILTERED]", "commit"=>"Login"}
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 206)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 325)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 778)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-01-09 12:59:24 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"", "password"=>"[FILTERED]", "commit"=>"Login"}
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 206)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 325)
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 769)
+
+
+Started GET "/register" for 127.0.0.1 at 2024-01-09 12:59:26 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1825)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 1946)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 2296)
+
+
+Started POST "/register" for 127.0.0.1 at 2024-01-09 12:59:30 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"test", "password_digest"=>"[FILTERED]"}, "commit"=>"Register"}
+Redirected to http://127.0.0.1:3000/login
+Completed 302 Found in 229ms (ActiveRecord: 0.0ms | Allocations: 461)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-01-09 12:59:30 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 394)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 513)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 730)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-01-09 12:59:34 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"test", "password"=>"[FILTERED]", "commit"=>"Login"}
+Redirected to http://127.0.0.1:3000/posts
+Completed 302 Found in 231ms (ActiveRecord: 0.0ms | Allocations: 390)
+
+
+Started GET "/posts" for 127.0.0.1 at 2024-01-09 12:59:34 +0000
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 1753)
+
+
+  
+NoMethodError (undefined method `find_by' for User:Class):
+  
+app/controllers/application_controller.rb:7:in `current_user'
+app/controllers/posts_controller.rb:15:in `authenticate_user!'
+Started GET "/posts" for 127.0.0.1 at 2024-01-09 13:00:29 +0000
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 5736)
+
+
+  
+NoMethodError (undefined method `find_by' for User:Class):
+  
+app/controllers/application_controller.rb:7:in `current_user'
+app/controllers/posts_controller.rb:15:in `authenticate_user!'
+Started GET "/posts" for 127.0.0.1 at 2024-01-09 13:00:51 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms | Allocations: 9527)
+
+
+  
+NoMethodError (undefined method `find_by' for User:Class):
+  
+app/controllers/application_controller.rb:7:in `current_user'
+app/controllers/posts_controller.rb:15:in `authenticate_user!'
+Started GET "/posts" for 127.0.0.1 at 2024-01-09 13:00:56 +0000
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 1699)
+
+
+  
+NoMethodError (undefined method `find_by' for User:Class):
+  
+app/controllers/application_controller.rb:7:in `current_user'
+app/controllers/posts_controller.rb:15:in `authenticate_user!'
+Started GET "/posts" for 127.0.0.1 at 2024-01-09 13:01:48 +0000
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 5733)
+
+
+  
+NoMethodError (undefined method `find_by' for User:Class):
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/controllers/posts_controller.rb:15:in `authenticate_user!'
+Started GET "/posts" for 127.0.0.1 at 2024-01-09 13:01:52 +0000
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 1699)
+
+
+  
+NoMethodError (undefined method `find_by' for User:Class):
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/controllers/posts_controller.rb:15:in `authenticate_user!'
+Started GET "/posts" for 127.0.0.1 at 2024-01-09 13:01:59 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms | Allocations: 9524)
+
+
+  
+NoMethodError (undefined method `find_by' for User:Class):
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/controllers/posts_controller.rb:15:in `authenticate_user!'
+Started GET "/posts" for 127.0.0.1 at 2024-01-09 13:02:29 +0000
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 5745)
+
+
+  
+NoMethodError (undefined method `find' for User:Class):
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/controllers/posts_controller.rb:15:in `authenticate_user!'
+Started GET "/posts" for 127.0.0.1 at 2024-01-09 13:03:11 +0000
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms | Allocations: 2986)
+
+
+  
+NameError (undefined local variable or method `byebug' for #<PostsController:0x00000000012cc8>):
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/controllers/posts_controller.rb:15:in `authenticate_user!'
+Started GET "/posts" for 127.0.0.1 at 2024-01-09 13:04:14 +0000
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms | Allocations: 3013)
+
+
+  
+NameError (undefined local variable or method `debug' for #<PostsController:0x00000000016558>
+Did you mean?  debugger):
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/controllers/posts_controller.rb:15:in `authenticate_user!'
+Started GET "/posts" for 127.0.0.1 at 2024-01-09 13:06:34 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms | Allocations: 4499)
+
+
+  
+NameError (undefined local variable or method `byebug' for #<PostsController:0x0000000000bb30>):
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/controllers/posts_controller.rb:15:in `authenticate_user!'
+Started GET "/posts" for 127.0.0.1 at 2024-01-09 13:06:45 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms | Allocations: 4499)
+
+
+  
+NameError (undefined local variable or method `byebug' for #<PostsController:0x0000000000bae0>):
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/controllers/posts_controller.rb:15:in `authenticate_user!'
+Started GET "/posts" for 127.0.0.1 at 2024-01-09 13:07:22 +0000
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 6085)
+
+
+  
+NoMethodError (undefined method `find' for User:Class):
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/controllers/posts_controller.rb:15:in `authenticate_user!'
+Started GET "/posts" for 127.0.0.1 at 2024-01-09 13:18:31 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms | Allocations: 9512)
+
+
+  
+NoMethodError (undefined method `find_by' for User:Class):
+  
+app/controllers/application_controller.rb:6:in `current_user'
+app/controllers/posts_controller.rb:15:in `authenticate_user!'
+Started GET "/" for 127.0.0.1 at 2024-01-09 13:18:38 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 710)
+  Rendered layout layouts/application.html.erb (Duration: 47.2ms | Allocations: 5183)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 0.0ms | Allocations: 6161)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<ActionView::Base:0x0000000000bfe0>
+Did you mean?  current_page?):
+     5: </head>
+     6: <body>
+     7:   <nav>
+     8:     <% if current_user %>
+     9:       Welcome, <%= current_user.username %>! | <%= link_to 'Logout', logout_path, method: :delete %>
+    10:     <% else %>
+    11:       <%= link_to 'Login', login_path %> | <%= link_to 'Register', register_path %>
+  
+app/views/layouts/application.html.erb:8
+Started GET "/" for 127.0.0.1 at 2024-01-09 13:19:18 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 9.9ms | Allocations: 2675)
+  Rendered layout layouts/application.html.erb (Duration: 64.8ms | Allocations: 7902)
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 0.0ms | Allocations: 13794)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<ActionView::Base:0x0000000000bb58>
+Did you mean?  current_page?):
+     5: </head>
+     6: <body>
+     7:   <nav>
+     8:     <% if current_user %>
+     9:       Welcome, <%= current_user.username %>! | <%= link_to 'Logout', logout_path, method: :delete %>
+    10:     <% else %>
+    11:       <%= link_to 'Login', login_path %> | <%= link_to 'Register', register_path %>
+  
+app/views/layouts/application.html.erb:8
+Started GET "/" for 127.0.0.1 at 2024-01-09 13:19:45 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 415)
+  Rendered layout layouts/application.html.erb (Duration: 47.1ms | Allocations: 4674)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.0ms | Allocations: 4881)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<ActionView::Base:0x0000000000bea0>
+Did you mean?  current_page?):
+     5: </head>
+     6: <body>
+     7:   <nav>
+     8:     <% if current_user %>
+     9:       Welcome, <%= current_user.username %>! | <%= link_to 'Logout', logout_path, method: :delete %>
+    10:     <% else %>
+    11:       <%= link_to 'Login', login_path %> | <%= link_to 'Register', register_path %>
+  
+app/views/layouts/application.html.erb:8
+Started GET "/" for 127.0.0.1 at 2024-01-09 13:20:35 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 659)
+  Rendered layout layouts/application.html.erb (Duration: 42.6ms | Allocations: 5116)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 0.0ms | Allocations: 6086)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<ActionView::Base:0x0000000000f708>
+Did you mean?  current_page?):
+     5: </head>
+     6: <body>
+     7:   <nav>
+     8:     <% if current_user %>
+     9:       Welcome, <%= current_user.username %>! | <%= link_to 'Logout', logout_path, method: :delete %>
+    10:     <% else %>
+    11:       <%= link_to 'Login', login_path %> | <%= link_to 'Register', register_path %>
+  
+app/views/layouts/application.html.erb:8
+Started GET "/" for 127.0.0.1 at 2024-01-09 13:20:56 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 659)
+  Rendered layout layouts/application.html.erb (Duration: 46.2ms | Allocations: 5116)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.0ms | Allocations: 6080)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<ActionView::Base:0x00000000012f70>
+Did you mean?  current_page?):
+     5: </head>
+     6: <body>
+     7:   <nav>
+     8:     <% if current_user %>
+     9:       Welcome, <%= current_user.username %>! | <%= link_to 'Logout', logout_path, method: :delete %>
+    10:     <% else %>
+    11:       <%= link_to 'Login', login_path %> | <%= link_to 'Register', register_path %>
+  
+app/views/layouts/application.html.erb:8
+Started GET "/login" for 127.0.0.1 at 2024-01-09 13:21:05 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 415)
+  Rendered layout layouts/application.html.erb (Duration: 48.0ms | Allocations: 4673)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.0ms | Allocations: 4875)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<ActionView::Base:0x00000000013240>
+Did you mean?  current_page?):
+     5: </head>
+     6: <body>
+     7:   <nav>
+     8:     <% if current_user %>
+     9:       Welcome, <%= current_user.username %>! | <%= link_to 'Logout', logout_path, method: :delete %>
+    10:     <% else %>
+    11:       <%= link_to 'Login', login_path %> | <%= link_to 'Register', register_path %>
+  
+app/views/layouts/application.html.erb:8
+Started GET "/login" for 127.0.0.1 at 2024-01-09 13:22:07 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 661)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 7289)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms | Allocations: 8256)
+
+
+  
+ActionView::Template::Error (undefined method `find_by' for User:Class):
+     5: </head>
+     6: <body>
+     7:   <nav>
+     8:     <% if current_user %>
+     9:       Welcome, <%= current_user.username %>! | <%= link_to 'Logout', logout_path, method: :delete %>
+    10:     <% else %>
+    11:       <%= link_to 'Login', login_path %> | <%= link_to 'Register', register_path %>
+  
+app/controllers/application_controller.rb:7:in `current_user'
+app/controllers/application_controller.rb:4:in `current_user'
+app/views/layouts/application.html.erb:8
+Started GET "/login" for 127.0.0.1 at 2024-01-09 13:23:06 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 659)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 6949)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 7913)
+
+
+  
+ActionView::Template::Error (undefined method `find_by' for User:Class):
+     5: </head>
+     6: <body>
+     7:   <nav>
+     8:     <% if current_user %>
+     9:       Welcome, <%= current_user.username %>! | <%= link_to 'Logout', logout_path, method: :delete %>
+    10:     <% else %>
+    11:       <%= link_to 'Login', login_path %> | <%= link_to 'Register', register_path %>
+  
+app/controllers/application_controller.rb:7:in `current_user'
+app/controllers/application_controller.rb:4:in `current_user'
+app/views/layouts/application.html.erb:8
+Started GET "/login" for 127.0.0.1 at 2024-01-09 13:23:28 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 415)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 2460)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 2667)
+
+
+  
+ActionView::Template::Error (undefined method `find_by' for User:Class):
+     5: </head>
+     6: <body>
+     7:   <nav>
+     8:     <% if current_user %>
+     9:       Welcome, <%= current_user.username %>! | <%= link_to 'Logout', logout_path, method: :delete %>
+    10:     <% else %>
+    11:       <%= link_to 'Login', login_path %> | <%= link_to 'Register', register_path %>
+  
+app/controllers/application_controller.rb:7:in `current_user'
+app/controllers/application_controller.rb:4:in `current_user'
+app/views/layouts/application.html.erb:8
+Started GET "/login" for 127.0.0.1 at 2024-01-09 13:24:22 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 659)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 6945)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms | Allocations: 7916)
+
+
+  
+ActionView::Template::Error (undefined method `where' for User:Class
+Did you mean?  when):
+     5: </head>
+     6: <body>
+     7:   <nav>
+     8:     <% if current_user %>
+     9:       Welcome, <%= current_user.username %>! | <%= link_to 'Logout', logout_path, method: :delete %>
+    10:     <% else %>
+    11:       <%= link_to 'Login', login_path %> | <%= link_to 'Register', register_path %>
+  
+app/controllers/application_controller.rb:7:in `current_user'
+app/controllers/application_controller.rb:4:in `current_user'
+app/views/layouts/application.html.erb:8
+Started GET "/login" for 127.0.0.1 at 2024-01-09 13:24:56 +0000
+Processing by SessionsController#new as */*
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 544)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 931)
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 2004)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-01-09 13:25:17 +0000
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 410)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 6501)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms | Allocations: 6703)
+
+
+  
+ActionView::Template::Error (undefined method `find_by' for User:Class):
+     5: </head>
+     6: <body>
+     7:   <nav>
+     8:     <% if current_user %>
+     9:       Welcome, <%= current_user.username %>! | <%= link_to 'Logout', logout_path, method: :delete %>
+    10:     <% else %>
+    11:       <%= link_to 'Login', login_path %> | <%= link_to 'Register', register_path %>
+  
+app/controllers/application_controller.rb:7:in `current_user'
+app/controllers/application_controller.rb:4:in `current_user'
+app/views/layouts/application.html.erb:8
